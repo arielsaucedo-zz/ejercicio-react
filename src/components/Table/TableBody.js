@@ -3,8 +3,8 @@ import React from 'react';
 function TableBody(props) {
     return(
         <tbody>
-            {props.table.map(item => 
-                <tr>
+            {props.table.map((item, i) => 
+                <tr key={item + i}>
                 <td>{item.name}</td>
                 <td>{item.description}</td>
                 <td>{item.price}</td>

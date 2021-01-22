@@ -29,13 +29,13 @@ const infoCard = [
   },
   {
     titulo: "Amount in products" ,
-    cifra: 546456 ,
+    cifra: "$546.456" ,
     border: "card border-left-success shadow h-100 py-2" ,
     icono: "fas fa-dollar-sign fa-2x text-gray-300",
   },
   {
     titulo: "Users quantity" ,
-    cifra: 38,
+    cifra: "38",
     border: "card border-left-warning shadow h-100 py-2" ,
     icono: "fas fa-user-check fa-2x text-gray-300",
   },

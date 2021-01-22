@@ -5,8 +5,8 @@ function CardDB(props) {
     return(
         <div className="row">
             {props.items.map((item, i) => 
-            <div className="col-md-4 mb-4">
-                <div key={item + i} className= {item.border}>
+            <div key={item + i} className="col-md-4 mb-4">
+                <div className= {item.border}>
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
