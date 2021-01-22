@@ -1,16 +1,19 @@
 import React from 'react';
 
-function CategoriesDB() {
+function CategoriesDB(props) {
     return(
-        <div class="col-lg-6 mb-4">
-            <div class="card bg-info text-white shadow">
-                <div class="card-body">
-                    
-                </div>
+            <div className="row">
+                {props.titles.map((title, i) =>
+                    <div key={title + i} className="col-lg-6 mb-4">
+                        <div className="card bg-info text-white shadow">
+                            <div className="card-body">
+                                {title}
+                            </div>
+                        </div>
+                    </div>)}
             </div>
-        </div>
-    )
-    
-}
+        )
+    }
+
 
 export default CategoriesDB;

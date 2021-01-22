@@ -1,21 +1,43 @@
 import React from 'react';
-import CardIcon from './CardIcon';
-import InfoCard from "./InfoCard";
+import PropTypes from "prop-types";
 
-function CardDB() {
+function CardDB(props) {
     return(
-        <div class="col-md-4 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <InfoCard />
-                        <CardIcon />
+        <div className="row">
+            {props.items.map((item, i) => 
+            <div className="col-md-4 mb-4">
+                <div key={item + i} className= {item.border}>
+                <div className="card-body">
+                    <div className="row no-gutters align-items-center">
+                        <div className="col mr-2">
+                            <div className="text-xs font-weight-bold text-primary text-uppercase mb-1"> 
+                                {item.titulo}
+                            </div>
+                        <div className="h5 mb-0 font-weight-bold text-gray-800">{item.cifra}</div>
+                    </div>
+                    <div className="col-auto">
+                        <i className= {item.icono}></i>
+                    </div>
                     </div>
                 </div>
             </div>
+        </div>)}
         </div>
     )
     
+}
+CardDB.defaultProps = {
+    titulo: "Sin titulo",
+    cifra: 0 ,
+    border: "card border-left-primary shadow h-100 py-2",
+    icono: "fas fa-clipboard-list fa-2x text-gray-300",
+}
+
+CardDB.propTypes = {
+    titulo: PropTypes.string,
+    cifra: PropTypes.number ,
+    border: PropTypes.string,
+    icono: PropTypes.string,
 }
 
 export default CardDB;

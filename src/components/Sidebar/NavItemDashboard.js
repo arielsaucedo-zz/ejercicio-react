@@ -2,9 +2,9 @@ import React from 'react';
 
 function NacItemDashboard() {
     return(
-        <li class="nav-item active">
-            <a class="nav-link" href="/">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
+        <li className="nav-item active">
+            <a className="nav-link" href="/">
+                <i className="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
     )
